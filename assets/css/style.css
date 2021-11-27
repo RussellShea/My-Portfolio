@@ -8,20 +8,21 @@ header {
 	padding: 20px 35px;
 	display: flex;
 	justify-content: center;
-	flex-wrap: nowrap;
+	flex-direction: column;
 }
 header h1 {
 	font-weight: bold;
 	font-size: 1.75vw;
 	padding: 50px;
 	margin: 0;
+	align-items: center;
+	text-align: center;
 }
 header nav {
 	margin: auto;
 }
 header nav ul {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
@@ -30,8 +31,31 @@ header nav ul li a {
 	padding: 10px 15px;
 	font-weight: lighter;
 	font-size: 1.55vw;
+	text-decoration: none;
 }
 header nav ul li a:hover {
 	color: goldenrod;
-	border-radius: 10px;
+	font-weight: bolder;
+}
+/* Hero Style */
+hero {
+	background-size: contain;
+	background-position: center;
+	background-attachment: fixed;
+	background-position: 80%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	flex-direction: row;
+	align-content: space-between;
+	background-color: aliceblue;
+}
+hero img {
+	display: flex;
+	margin: 10px;
+	border-style: double;
+	border-color: black;
+	position: center;
+	position: relative;
 }

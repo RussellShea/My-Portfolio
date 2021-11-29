@@ -2,12 +2,21 @@
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-color: rgb(226, 189, 189);
 }
 
 h2 {
 	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	border-radius: 15px;
+	background-color: white;
+	border-style: dotted;
+	border-color: black;
+	padding: 10px;
 }
 
 /* Applies styles to header */
@@ -17,7 +26,7 @@ header {
 	justify-content: center;
 	flex-direction: column;
 }
-header h1 {
+header div h1 {
 	font-weight: bold;
 	font-size: 75px;
 	padding: 50px;
@@ -68,19 +77,19 @@ hero img {
 	max-width: 100%;
 }
 /* About Me styles */
-#about-me {
+.about-me-class {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: fit-content;
 }
-#about-me img {
+.about-me-class img {
 	max-width: 100%;
 	margin: 20px;
 	border-style: double;
 	border-color: black;
 }
-#about-me p {
+.about-me-class p {
 	margin: 5px 0 15px 0;
 	display: flex;
 	align-content: center;
@@ -94,35 +103,36 @@ hero img {
 	text-align: center;
 }
 /* Projects Style */
-
-#projects img {
+.projects-class {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	margin: auto;
+	width: 50%;
+}
+.image-over-text img {
 	width: 400px;
 	height: 400px;
-	max-width: 100%;
 	display: flex;
 	align-items: center;
+	position: relative;
+	justify-content: center;
+	padding: 25px;
 }
-#projects img:hover {
-	width: 600px;
-	height: 600px;
+.image-over-text img:hover {
+	opacity: 50%;
+}
+.image-over-text .text {
+	position: absolute;
+	width: 50%;
 }
 /* Contact Info Style */
 #contact-info {
-	display: inline-flex;
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	position: relative;
-}
-
-#contact-info ul li {
-	font-size: 25px;
-}
-#contact-info p {
 	margin: 5px 0 15px 0;
 	display: flex;
 	align-content: center;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	line-height: 1.7;
@@ -130,6 +140,15 @@ hero img {
 	font-size: 20px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+#contact-info ul {
+	font-size: 25px;
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */

@@ -13,7 +13,9 @@
     <!-- Header including Name and Navigation for About Me, Projects, and Contact Information -->
 
     <header>
-      <h1>Russell Sheathelm</h1> 
+      <div class="flex">
+        <h1>Russell Sheathelm</h1>
+      </div>
       <nav class="list">
         <ul>
           <li>
@@ -35,7 +37,7 @@
     </hero>
 
     <!-- About Me Section-->
-    <section id ="about-me">
+    <section id="about-me" class ="about-me-class">
       <h2>About the Engineer...</h2>
       <img src="assets/images/russ.portfolio.jpg" alt="russ at his desk" width=200px height="200px">
         <p>
@@ -58,9 +60,17 @@
     </section>
     
     <!-- Projects Section-->
-    <section id="projects">
-      <h2>My Proudest Projects</h2>
-        <a href="https://github.com/RussellShea/run-buddy2.0" target="_blank" rel="noopener noreferrer"> <img src="assets/images/44525.png" alt="Running Man"> </a>
+    <section id="projects" class="projects-class">
+      <div>
+        <h2>My Proudest Projects</h2>
+      </div>
+        <div class="image-over-text">
+          <a href="https://github.com/RussellShea/run-buddy2.0" target="_blank" rel="noopener noreferrer"> <img
+              src="assets/images/44525.png" alt="Running Man"> 
+          </a>
+          <div class="text">Run Buddy</div>
+      </div> 
+     
     </section>
 
     <!-- Contact Section-->

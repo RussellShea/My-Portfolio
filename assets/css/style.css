@@ -175,9 +175,10 @@ hero img {
 		position: relative;
 	}
 
-	header h1 {
+	header div h1 {
 		width: 100%;
 		text-align: center;
+		font-size: 5vw;
 	}
 
 	header nav ul {
@@ -191,7 +192,7 @@ hero img {
 	}
 }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* MEDIA QUERY FOR DESKTOPS AND SMALLER */
 @media screen and (max-width: 980px) {
 	header {
 		padding-bottom: 0;

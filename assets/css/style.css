@@ -1,8 +1,12 @@
 /* Sets the font family for the page */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
 		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	background-color: rgb(226, 189, 189);
 }
 
 h2 {
@@ -10,12 +14,8 @@ h2 {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	align-items: center;
 	text-align: center;
-	border-radius: 15px;
-	background-color: white;
-	border-style: dotted;
-	border-color: black;
+
 	padding: 10px;
 }
 
@@ -25,16 +25,23 @@ header {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	background-color: rgb(160, 42, 42);
+	border-bottom: black 4px solid;
 }
 header div h1 {
 	font-weight: bold;
 	font-size: 75px;
-	padding: 50px;
+	padding: 50px 0px 0px 0px;
 	margin: 0;
 	align-items: center;
 	text-align: center;
 }
+header div h2 {
+	margin: 0;
+	padding: 0;
+}
 header nav {
+	display: flex;
 	margin: auto;
 }
 .list ul {
@@ -43,11 +50,14 @@ header nav {
 	align-items: center;
 	list-style: none;
 }
+
 .list ul li a {
 	padding: 10px 15px;
 	font-weight: lighter;
-	font-size: 2.5vw;
+	font-size: 3vw;
 	text-decoration: none;
+	color: white;
+	flex-grow: 1;
 }
 .list ul li a:hover {
 	color: goldenrod;
@@ -57,15 +67,17 @@ header nav {
 hero {
 	background-position: center;
 	background-attachment: fixed;
-	background-position: 80%;
+	background-position: 100%;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: nowrap;
 	align-items: stretch;
 	flex-direction: row;
 	align-content: space-between;
-	background-color: aliceblue;
-	margin-bottom: auto;
+	background-color: rgb(169, 172, 175);
+	margin-bottom: 50px;
+	padding: 100px 0 100px 0;
+	border-bottom: solid black 4px;
 }
 hero img {
 	display: flex;
@@ -82,6 +94,8 @@ hero img {
 	flex-direction: column;
 	align-items: center;
 	width: fit-content;
+	padding: 0px 0px 150px 0;
+	border-bottom: solid black 4px;
 }
 .about-me-class img {
 	max-width: 100%;
@@ -109,7 +123,10 @@ hero img {
 	align-items: center;
 	width: fit-content;
 	margin: auto;
-	width: 50%;
+	width: 100%;
+	padding: 150px 0 200px 0;
+	background-color: rgb(169, 172, 175);
+	border-bottom: black solid 4px;
 }
 .image-over-text img {
 	width: 400px;
@@ -119,27 +136,26 @@ hero img {
 	position: relative;
 	justify-content: center;
 	padding: 25px;
+	border-radius: 15%;
 }
 .image-over-text img:hover {
 	opacity: 50%;
 }
-.image-over-text .text {
-	position: absolute;
-	width: 50%;
-}
+
 /* Contact Info Style */
 #contact-info {
-	margin: 5px 0 15px 0;
+	padding: 100px 0 100px 0;
 	display: flex;
 	align-content: center;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	line-height: 1.7;
-	width: 80%;
+
+	width: 100%;
 	font-size: 20px;
 	margin: 0 auto;
 	text-align: center;
+	background-color: rgb(160, 42, 42);
 }
 
 #contact-info ul {
@@ -152,3 +168,74 @@ hero img {
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+	header {
+		padding-bottom: 0;
+		justify-content: center;
+		position: relative;
+	}
+
+	header h1 {
+		width: 100%;
+		text-align: center;
+	}
+
+	header nav ul {
+		margin-top: 20px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	header nav ul li a {
+		font-size: 2.5vw;
+	}
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 980px) {
+	header {
+		padding-bottom: 0;
+		justify-content: center;
+		position: relative;
+	}
+
+	header h1 {
+		text-align: center;
+	}
+
+	header nav ul {
+		margin-top: 20px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	header nav ul li a {
+		font-size: 40px;
+	}
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+	section {
+		padding: auto;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	header,
+	section {
+		display: flex;
+		flex: 1 100%;
+		width: 100%;
+	}
+	header h1 {
+		font-size: 1.5vw;
+	}
+	nav .list ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		text-decoration: none;
+	}
+}
